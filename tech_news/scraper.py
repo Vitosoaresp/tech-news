@@ -6,7 +6,11 @@ import requests
 def fetch(url):
     try:
         sleep(1)
-        response = requests.get(url, timeout=3)
+        response = requests.get(
+            url,
+            timeout=3,
+            headers={"user-agent": "Fake user-agent"},
+        )
         if response.status_code == 200:
             return response.text
         return None
