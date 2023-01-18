@@ -1,14 +1,16 @@
+from collections import Counter
+
 from tech_news.database import search_news
 
 
-def order_by_comment(e):
+def sort_by_comment(e):
     return e["comments_count"]
 
 
 # Requisito 10
 def top_5_news():
     news_list = search_news({})
-    news_list.sort(key=order_by_comment, reverse=True)
+    news_list.sort(key=sort_by_comment, reverse=True)
     if len(news_list) > 5:
         news_list = news_list[:5]
     list_formated = []
@@ -19,4 +21,11 @@ def top_5_news():
 
 # Requisito 11
 def top_5_categories():
-    """Seu código deve vir aqui"""
+    categories = []
+    news_list = search_news({})
+    for new in news_list:
+        categories.append(new["category"])
+    top_categories = [
+        category[0] for category in Counter(sorted(categories)).most_common(5)
+    ]
+    return top_categories
