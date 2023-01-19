@@ -2,6 +2,9 @@
 
  O principal objetivo desse projeto é fazer raspagem em notícias sobre tecnologia. Noticias que são retidaras do [blog da Trybe](https://blog.betrybe.com/)
  
+ ![image](https://user-images.githubusercontent.com/23152592/213334703-5a5f80c7-c3bd-444b-845e-a802784f30ee.png)
+
+ 
 # Tecnologias
  
  > Desenvolvindo usando: [Python](https://www.python.org/), [Docker](https://www.docker.com/), [MongoDB](https://www.mongodb.com/pt-br), [Pymongo](https://pymongo.readthedocs.io/en/stable/)
