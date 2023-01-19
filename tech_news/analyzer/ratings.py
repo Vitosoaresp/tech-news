@@ -7,7 +7,6 @@ def sort_by_comment(e):
     return e["comments_count"]
 
 
-# Requisito 10
 def top_5_news():
     news_list = search_news({})
     news_list.sort(key=sort_by_comment, reverse=True)
@@ -19,7 +18,6 @@ def top_5_news():
     return list_formated
 
 
-# Requisito 11
 def top_5_categories():
     categories = []
     news_list = search_news({})

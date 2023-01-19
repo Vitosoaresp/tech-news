@@ -1,4 +1,3 @@
-# Requisito 12
 from tech_news.analyzer.ratings import top_5_categories, top_5_news
 from tech_news.analyzer.search_engine import (search_by_category,
                                               search_by_date, search_by_tag,
@@ -45,3 +44,5 @@ def analyzer_menu():
     else:
         print(ValueError('Opção inválida'))
         return
+
+__name__ == '__main__' and analyzer_menu()

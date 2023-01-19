@@ -21,14 +21,12 @@ def fetch(url):
         return None
 
 
-# Requisito 2
 def scrape_updates(html_content):
     selector = Selector(text=html_content)
     news_links = selector.css(".post-inner header h2 a::attr(href)").getall()
     return news_links
 
 
-# Requisito 3
 def scrape_next_page_link(html_content):
     selector = Selector(text=html_content)
     link_next_page = selector.css(".nav-links a.next::attr(href)").get()
@@ -43,7 +41,6 @@ def striphtml(data):
     return p.sub('', data)
 
 
-# Requisito 4
 def scrape_news(html_content):
     selector = Selector(text=html_content)
     dict_news = dict()
@@ -75,7 +72,6 @@ def scrape_news(html_content):
     return dict_news
 
 
-# Requisito 5
 def get_tech_news(amount):
     url = 'https://blog.betrybe.com/'
     news = []
